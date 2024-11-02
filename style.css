@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 90%; /* Responsif */
+    max-width: 1100px; /* Lebar Maksimal */
+    margin: 0 auto;
+}
+
+/* Button */
+.btn {
+    padding: 1rem 1.5rem;
+    background: #2c3e50;
+    border: 1.5px solid #2c3e50;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+/* Title */
+.pre-tittle {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: grey;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.pre-tittle::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: black; /* Ganti warna logo menjadi hitam */
+}
+
+
+/* Navbar styles */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Ubah ini untuk mengatur elemen ke kanan */
+}
+
+/* Toggle button */
+.toggle-button {
+    background: none;
+    border: none;
+    font-size: 24px; /* Ukuran tombol */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1003; /* Z-index yang lebih rendah daripada navbar */
+}
+
+/* Navbar styles */
+
+#navbar {
+    position: fixed; /* Tetap di posisi tetap */
+    top: 60px; /* Memastikan navbar berada di bawah tombol */
+    right: -250px; /* Mengatur posisi awal di luar tampilan */
+    width: 250px; /* Lebar navbar */
+    height: 100%; /* Mengatur tinggi navbar */
+    background-color: #fff; /* Warna latar belakang */
+    border-left: 0; /* Batas kiri */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Bayangan */
+    transition: right 0.3s ease; /* Transisi untuk animasi */
+    transition: right 0.3s ease; /* Smooth transition */
+    z-index: 1004; /* Menjaga navbar di atas konten lainnya */
+}
+
+/* Kelas untuk menampilkan navbar */
+#navbar.show {
+    right: 0; /* Tampilkan navbar */
+}
+
+
+#navbar {
+    top: 0;/* Pastikan navbar berada di bagian atas */
+    /* ... */
+}
+
+#navbar {
+    background-color: #1C464F; /* Ganti latar belakang navbar menjadi hitam */
+    color: white; /* Ganti warna teks navbar menjadi putih agar terlihat */
+}
+
+#navbar.hidden {
+    display: none; /* Menyembunyikan navbar ketika memiliki kelas hidden */
+}
+
+#navbar.show + .toggle-button {
+    display: none; /* Sembunyikan tombol toggle ketika navbar terbuka */
+}
+
+
+
+/* Navbar end */
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Ubah ke kolom untuk responsif */
+    gap: 1rem; /* Jarak antar item */
+    margin: 0;
+    padding: 1rem; /* Tambahkan padding */
+}
+
+.nav ul li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+}
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 50%;
+}
+
+.home-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.home-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7rem;
+}
+
+.home-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.7rem;
+    object-fit: cover;
+}
+
+section {
+    padding: 0 3rem 5rem;
+}
+
+/* About Section */
+#about {
+    background-color: #1C464F;
+    padding: 6rem 0;
+}
+
+.section-tittle-about {
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+    color: black;
+}
+
+.intro {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.9rem;
+    margin: 0.5rem 0;
+    text-align: justify;
+}
+
+/* Layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 0.7rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h4 {
+    color: #3498db;
+    margin: 0.5rem 0;
+}
+
+.about p {
+    color: black;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.about-icon {
+    background-color: #3498db;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+/* Skills & Experience */
+#skills {
+    padding: 6rem;
+    background: #ecf0f1;
+}
+
+.section-tittle-skills {
+    text-align: center;
+    margin: 1rem 0 4rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.experience {
+    display: flex;
+    gap: 2rem;
+}
+
+.experience .line div {
+    width: 2px;
+    height: 100%;
+    background: black;
+    position: relative;
+}
+
+.experience-info {
+    margin: 3rem 0;
+}
+
+.experience .line div::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 6rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: white;
+    border: 2px solid gainsboro;
+    border-radius: 0.5rem;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: gray;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid gray;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #27ae60;
+}
+
+/* Footer */
+footer {
+    margin-bottom: 0;
+    padding: 4rem 2rem;
+    background: #1C464F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links span {
+    color: white;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.footer-copyright {
+    font-size: 0.2rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 2rem 1rem;
+    }
+
+    .footer-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-navigation a {
+        margin: 0.3rem;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .home-left {
+        max-width: 100%;
+    }
+
+    .home-name {
+        font-size: 2rem;
+    }
+
+    .home-right {
+        margin-left: 0;
+    }
+}
